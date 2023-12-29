@@ -189,11 +189,11 @@
             <div class="services-box" id="stay1">
                 <i class='bx bx-pencil'></i>
                 <h3>TuesdayTool - In progress</h3>
-                <p>TuesdayTool is a weekly technical writing on how to use a chosen tool, especially OSINT tools.<span
-                        class="hidden-paragraph3"> It is
-                        published every
-                        Tuesday of the week.</span></p>
-                <a href="#stay1" class="btn3" onclick="toggleParagraphs3()">Read More</a>
+                <p>TuesdayTool is a weekly technical writing on how to use a chosen tool, especially OSINT tools. It is
+                    published every Tuesday of the week.</p>
+
+                <a href="https://cyberliza.medium.com" target="_blank" class="btn3">Read More</a>
+
             </div>
 
             <div class="services-box" id="stay2">
@@ -246,6 +246,30 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- custom js -->
     <script src="js/script.js"></script>
+    <script>
+        function subscribe() {
+            // Get the email input value
+            var emailInput = document.getElementById('email');
+            var email = emailInput.value;
+
+            // You can perform further validation here before proceeding
+            if (validateEmail(email)) {
+                // Perform subscription logic (e.g., send email to server, update database, etc.)
+                alert('Subscribed successfully!'); // You can replace this with your actual subscription logic
+            } else {
+                alert('Invalid email address. Please enter a valid email.');
+            }
+
+            // Clear the input field
+            emailInput.value = '';
+        }
+
+        function validateEmail(email) {
+            // Basic email validation (you might want to use a more sophisticated method)
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
 </body>
 
 </html>
